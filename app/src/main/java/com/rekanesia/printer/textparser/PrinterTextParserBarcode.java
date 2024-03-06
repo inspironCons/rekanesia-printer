@@ -2,17 +2,17 @@ package com.rekanesia.printer.textparser;
 
 import java.util.Hashtable;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinter;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterCommands;
-import com.pupukindonesia.rmsandroid.printer.barcode.Barcode;
-import com.pupukindonesia.rmsandroid.printer.barcode.Barcode128;
-import com.pupukindonesia.rmsandroid.printer.barcode.BarcodeEAN13;
-import com.pupukindonesia.rmsandroid.printer.barcode.BarcodeEAN8;
-import com.pupukindonesia.rmsandroid.printer.barcode.BarcodeUPCA;
-import com.pupukindonesia.rmsandroid.printer.barcode.BarcodeUPCE;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosParserException;
+import com.rekanesia.printer.EscPosPrinter;
+import com.rekanesia.printer.EscPosPrinterCommands;
+import com.rekanesia.printer.barcode.Barcode;
+import com.rekanesia.printer.barcode.Barcode128;
+import com.rekanesia.printer.barcode.BarcodeEAN13;
+import com.rekanesia.printer.barcode.BarcodeEAN8;
+import com.rekanesia.printer.barcode.BarcodeUPCA;
+import com.rekanesia.printer.barcode.BarcodeUPCE;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.exceptions.EscPosEncodingException;
+import com.rekanesia.printer.exceptions.EscPosParserException;
 
 public class PrinterTextParserBarcode implements IPrinterTextParserElement {
 

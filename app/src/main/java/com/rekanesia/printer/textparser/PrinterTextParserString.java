@@ -3,10 +3,10 @@ package com.rekanesia.printer.textparser;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosCharsetEncoding;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinter;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterCommands;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException;
+import com.rekanesia.printer.EscPosCharsetEncoding;
+import com.rekanesia.printer.EscPosPrinter;
+import com.rekanesia.printer.EscPosPrinterCommands;
+import com.rekanesia.printer.exceptions.EscPosEncodingException;
 
 public class PrinterTextParserString implements IPrinterTextParserElement {
     private final EscPosPrinter printer;

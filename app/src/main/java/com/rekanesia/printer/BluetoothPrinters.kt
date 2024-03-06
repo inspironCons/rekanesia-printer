@@ -1,4 +1,4 @@
-package com.pupukindonesia.rmsandroid.printer
+package com.rekanesia.printer
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothClass
@@ -6,16 +6,14 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
-import com.google.firebase.crashlytics.ktx.crashlytics
-import com.google.firebase.ktx.Firebase
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
-import com.pupukindonesia.rmsandroid.printer.connection.bluetooth.BluetoothConnection
-import com.pupukindonesia.rmsandroid.printer.connection.bluetooth.BluetoothConnections
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException
+import com.rekanesia.printer.connection.bluetooth.BluetoothConnection
+import com.rekanesia.printer.connection.bluetooth.BluetoothConnections
+import com.rekanesia.printer.exceptions.EscPosConnectionException
 
 class BluetoothPrinters(
     val context: Context
@@ -40,17 +38,17 @@ class BluetoothPrinters(
 
                 //printer bluetooth EPPOS yang dari vendor mas mirza itu uncategorized
                 val deviceUncategorized = BluetoothClass.Device.Major.UNCATEGORIZED
-                Firebase.crashlytics.log("""
-                    device scanned, device: ${device.name}
-                    device scanned, majDeviceCl: $majDeviceCl
-                    device scanned, deviceCl: $deviceCl
-                """.trimIndent())
+//                Firebase.crashlytics.log("""
+//                    device scanned, device: ${device.name}
+//                    device scanned, majDeviceCl: $majDeviceCl
+//                    device scanned, deviceCl: $deviceCl
+//                """.trimIndent())
                 if ((majDeviceCl == deviceImaging || majDeviceCl == deviceUncategorized) && (deviceCl == 1664 || deviceCl == deviceImaging || deviceCl == deviceUncategorized)) {
                     printersTmp[i++] = BluetoothConnection(device, context = context)
                 }
 
             }else{
-                Firebase.crashlytics.log("Device null")
+//                Firebase.crashlytics.log("Device null")
             }
         }
         val bluetoothPrinters = arrayOfNulls<BluetoothConnection>(i)
@@ -72,14 +70,14 @@ class BluetoothPrinters(
                     try {
                         return printer?.connect()
                     } catch (e: EscPosConnectionException) {
-                        Firebase.crashlytics.recordException(
-                            RuntimeException("Failed to Connect printer",e)
-                        )
+//                        Firebase.crashlytics.recordException(
+//                            RuntimeException("Failed to Connect printer",e)
+//                        )
                         e.printStackTrace()
                     }
                 }
             } else {
-                Firebase.crashlytics.recordException(RuntimeException("bluetooh printer non found"))
+//                Firebase.crashlytics.recordException(RuntimeException("bluetooh printer non found"))
             }
             return null
         }
@@ -92,14 +90,14 @@ class BluetoothPrinters(
                     try {
                         onResult.invoke(printer?.connect())
                     } catch (e: EscPosConnectionException) {
-                        Firebase.crashlytics.recordException(
-                            RuntimeException("Failed to Connect printer",e)
-                        )
+//                        Firebase.crashlytics.recordException(
+//                            RuntimeException("Failed to Connect printer",e)
+//                        )
                         e.printStackTrace()
                     }
                 }
             } else {
-                Firebase.crashlytics.recordException(RuntimeException("bluetooh printer non found"))
+//                Firebase.crashlytics.recordException(RuntimeException("bluetooh printer non found"))
             }
             onResult.invoke(null)
         }

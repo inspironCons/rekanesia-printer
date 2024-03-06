@@ -1,6 +1,6 @@
 package com.rekanesia.printer.connection;
 
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException;
+import com.rekanesia.printer.exceptions.EscPosConnectionException;
 
 import java.io.IOException;
 import java.io.OutputStream;

@@ -1,7 +1,7 @@
 package com.rekanesia.printer.barcode;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterSize;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.EscPosPrinterSize;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
 
 public abstract class Barcode {
 

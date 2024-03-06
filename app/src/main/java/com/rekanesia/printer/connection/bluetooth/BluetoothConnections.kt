@@ -1,4 +1,4 @@
-package com.pupukindonesia.rmsandroid.printer.connection.bluetooth
+package com.rekanesia.printer.connection.bluetooth
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice

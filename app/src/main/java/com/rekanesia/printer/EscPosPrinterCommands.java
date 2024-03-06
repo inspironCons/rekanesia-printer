@@ -6,11 +6,11 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.EnumMap;
 
-import com.pupukindonesia.rmsandroid.printer.barcode.Barcode;
-import com.pupukindonesia.rmsandroid.printer.connection.DeviceConnection;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException;
+import com.rekanesia.printer.barcode.Barcode;
+import com.rekanesia.printer.connection.DeviceConnection;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.exceptions.EscPosConnectionException;
+import com.rekanesia.printer.exceptions.EscPosEncodingException;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;

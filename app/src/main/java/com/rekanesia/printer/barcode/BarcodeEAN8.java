@@ -1,8 +1,8 @@
 package com.rekanesia.printer.barcode;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterCommands;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterSize;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.EscPosPrinterCommands;
+import com.rekanesia.printer.EscPosPrinterSize;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
 
 public class BarcodeEAN8 extends BarcodeNumber {
     public BarcodeEAN8(EscPosPrinterSize printerSize, String code, float widthMM, float heightMM, int textPosition) throws EscPosBarcodeException {

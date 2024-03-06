@@ -1,4 +1,4 @@
-package com.pupukindonesia.rmsandroid.printer
+package com.rekanesia.printer
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
@@ -7,13 +7,14 @@ import android.content.Intent
 import android.os.AsyncTask
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.crashlytics.ktx.crashlytics
-import com.google.firebase.ktx.Firebase
-import com.pupukindonesia.rmsandroid.printer.connection.DeviceConnection
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosParserException
+import com.rekanesia.printer.EscPosCharsetEncoding
+import com.rekanesia.printer.EscPosPrinter
+import com.rekanesia.printer.EscPosPrinterSize
+import com.rekanesia.printer.connection.DeviceConnection
+import com.rekanesia.printer.exceptions.EscPosBarcodeException
+import com.rekanesia.printer.exceptions.EscPosConnectionException
+import com.rekanesia.printer.exceptions.EscPosEncodingException
+import com.rekanesia.printer.exceptions.EscPosParserException
 import java.lang.ref.WeakReference
 
 class AsyncEscPosPrinter(
@@ -62,24 +63,24 @@ open class AsyncEscPosPrint(context: Context?) : AsyncTask<AsyncEscPosPrinter?, 
             printer.printFormattedTextAndCut(printerData.textToPrint)
             publishProgress(PROGRESS_PRINTED)
         } catch (e: EscPosConnectionException) {
-            Firebase.crashlytics.recordException(RuntimeException(
-                "PRINTER EscPosConnectionException exception",e
-            ))
+//            Firebase.crashlytics.recordException(RuntimeException(
+//                "PRINTER EscPosConnectionException exception",e
+//            ))
             return FINISH_PRINTER_DISCONNECTED
         } catch (e: EscPosParserException) {
-            Firebase.crashlytics.recordException(RuntimeException(
-                "PRINTER EscPosParserException exception",e
-            ))
+//            Firebase.crashlytics.recordException(RuntimeException(
+//                "PRINTER EscPosParserException exception",e
+//            ))
             return FINISH_PARSER_ERROR
         } catch (e: EscPosEncodingException) {
-            Firebase.crashlytics.recordException(RuntimeException(
-                "PRINTER EscPosEncodingException exception",e
-            ))
+//            Firebase.crashlytics.recordException(RuntimeException(
+//                "PRINTER EscPosEncodingException exception",e
+//            ))
             return FINISH_ENCODING_ERROR
         } catch (e: EscPosBarcodeException) {
-            Firebase.crashlytics.recordException(RuntimeException(
-                "PRINTER EscPosBarcodeException exception",e
-            ))
+//            Firebase.crashlytics.recordException(RuntimeException(
+//                "PRINTER EscPosBarcodeException exception",e
+//            ))
             return FINISH_BARCODE_ERROR
         }
         return FINISH_SUCCESS
@@ -105,9 +106,9 @@ open class AsyncEscPosPrint(context: Context?) : AsyncTask<AsyncEscPosPrinter?, 
                     }
                 }
             }catch (e:Exception){
-                Firebase.crashlytics.recordException(RuntimeException(
-                    "PRINTER onPreExecute exception",e
-                ))
+//                Firebase.crashlytics.recordException(RuntimeException(
+//                    "PRINTER onPreExecute exception",e
+//                ))
             }
 
         }
@@ -203,9 +204,9 @@ class AsyncBluetoothEscPosPrint(context: Context?) : AsyncEscPosPrint(context) {
         try {
             deviceConnection?.connect()
         } catch (e: EscPosConnectionException) {
-            Firebase.crashlytics.recordException(RuntimeException(
-                "PRINTER AsyncBluetoothEscPosPrint doInBackground exception while connect",e
-            ))
+//            Firebase.crashlytics.recordException(RuntimeException(
+//                "PRINTER AsyncBluetoothEscPosPrint doInBackground exception while connect",e
+//            ))
         }
         return super.doInBackground(*params)
     }

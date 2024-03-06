@@ -6,8 +6,8 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.ParcelUuid;
 
-import com.pupukindonesia.rmsandroid.printer.connection.DeviceConnection;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException;
+import com.rekanesia.printer.connection.DeviceConnection;
+import com.rekanesia.printer.exceptions.EscPosConnectionException;
 
 import java.io.IOException;
 import java.util.UUID;

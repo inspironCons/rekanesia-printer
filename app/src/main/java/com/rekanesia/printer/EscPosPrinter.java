@@ -1,15 +1,15 @@
 package com.rekanesia.printer;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterCommands;import com.pupukindonesia.rmsandroid.printer.EscPosPrinterSize;import com.pupukindonesia.rmsandroid.printer.connection.DeviceConnection;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosParserException;
-import com.pupukindonesia.rmsandroid.printer.textparser.PrinterTextParser;
-import com.pupukindonesia.rmsandroid.printer.textparser.PrinterTextParserColumn;
-import com.pupukindonesia.rmsandroid.printer.textparser.IPrinterTextParserElement;
-import com.pupukindonesia.rmsandroid.printer.textparser.PrinterTextParserLine;
-import com.pupukindonesia.rmsandroid.printer.textparser.PrinterTextParserString;
+import com.rekanesia.printer.connection.DeviceConnection;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.exceptions.EscPosConnectionException;
+import com.rekanesia.printer.exceptions.EscPosEncodingException;
+import com.rekanesia.printer.exceptions.EscPosParserException;
+import com.rekanesia.printer.textparser.IPrinterTextParserElement;
+import com.rekanesia.printer.textparser.PrinterTextParser;
+import com.rekanesia.printer.textparser.PrinterTextParserColumn;
+import com.rekanesia.printer.textparser.PrinterTextParserLine;
+import com.rekanesia.printer.textparser.PrinterTextParserString;
 
 public class EscPosPrinter extends EscPosPrinterSize {
 

@@ -1,9 +1,9 @@
 package com.rekanesia.printer.textparser;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinter;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterCommands;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosParserException;
+import com.rekanesia.printer.EscPosPrinter;
+import com.rekanesia.printer.EscPosPrinterCommands;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.exceptions.EscPosParserException;
 
 import java.util.Hashtable;
 

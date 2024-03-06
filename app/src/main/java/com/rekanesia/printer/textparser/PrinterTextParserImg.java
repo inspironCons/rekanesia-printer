@@ -4,11 +4,11 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinter;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterCommands;
-import com.pupukindonesia.rmsandroid.printer.EscPosPrinterSize;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException;
+import com.rekanesia.printer.EscPosPrinter;
+import com.rekanesia.printer.EscPosPrinterCommands;
+import com.rekanesia.printer.EscPosPrinterSize;
+import com.rekanesia.printer.exceptions.EscPosConnectionException;
+import com.rekanesia.printer.exceptions.EscPosEncodingException;
 
 
 public class PrinterTextParserImg implements IPrinterTextParserElement {

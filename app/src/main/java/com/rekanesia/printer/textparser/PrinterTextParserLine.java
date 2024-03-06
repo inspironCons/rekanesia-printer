@@ -1,8 +1,8 @@
 package com.rekanesia.printer.textparser;
 
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosBarcodeException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosEncodingException;
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosParserException;
+import com.rekanesia.printer.exceptions.EscPosBarcodeException;
+import com.rekanesia.printer.exceptions.EscPosEncodingException;
+import com.rekanesia.printer.exceptions.EscPosParserException;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;

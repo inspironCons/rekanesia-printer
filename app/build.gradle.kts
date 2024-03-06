@@ -40,4 +40,5 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.zxing:core:3.5.0")
+    implementation("com.karumi:dexter:6.2.3")
 }

@@ -1,14 +1,12 @@
-package com.pupukindonesia.rmsandroid.printer.connection.bluetooth
+package com.rekanesia.printer.connection.bluetooth
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.bluetooth.BluetoothSocket
 import android.content.Context
-import com.google.firebase.crashlytics.ktx.crashlytics
-import com.google.firebase.ktx.Firebase
-import com.pupukindonesia.rmsandroid.printer.connection.DeviceConnection
-import com.pupukindonesia.rmsandroid.printer.exceptions.EscPosConnectionException
+import com.rekanesia.printer.connection.DeviceConnection
+import com.rekanesia.printer.exceptions.EscPosConnectionException
 import java.io.IOException
 import java.util.UUID
 
@@ -47,7 +45,7 @@ class BluetoothConnection
         if (this.isConnected) {
             return this
         }
-        Firebase.crashlytics.log("Bluetooth device is not connected. device : $device")
+//        Firebase.crashlytics.log("Bluetooth device is not connected. device : $device")
         if (device == null) {
             throw EscPosConnectionException("Bluetooth device is not connected.")
         }
