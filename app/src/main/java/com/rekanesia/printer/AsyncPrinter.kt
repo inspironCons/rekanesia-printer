@@ -7,9 +7,6 @@ import android.content.Intent
 import android.os.AsyncTask
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
-import com.rekanesia.printer.EscPosCharsetEncoding
-import com.rekanesia.printer.EscPosPrinter
-import com.rekanesia.printer.EscPosPrinterSize
 import com.rekanesia.printer.connection.DeviceConnection
 import com.rekanesia.printer.exceptions.EscPosBarcodeException
 import com.rekanesia.printer.exceptions.EscPosConnectionException
